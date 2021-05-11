@@ -18,7 +18,8 @@ export default function ExchangeRates(props) {
       } else return null;
     });
 
-  if (!amount || !amount.lenght) {
+  console.log(amount.length)
+  if (!amount || !amount.length || amount[0] === "0") {
     return <p className="instructions">Enter an amount to check the rates</p>;
   } else {
     return <div className="exchangeRates">{renderExchangeRateList()}</div>;
